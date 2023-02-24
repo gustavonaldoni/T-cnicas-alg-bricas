@@ -1,0 +1,151 @@
+\documentclass[14pt, aspectratio=169]{beamer}
+
+\usetheme{Copenhagen}
+\setbeamertemplate{navigation symbols}{} % Esconde as barras de navegação inferiores
+\setbeamercovered{transparent}
+\setbeamertemplate{headline}{} % Esconde a barra de navegação no topo do documento, relativa às seções
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\conj}[1]{\left\{ #1 \right\}}
+\newcommand{\skipframe}{\vspace{10.0cm}}
+\newcommand{\parenthesis}[1]{\left( #1 \right)}
+
+\newtheorem{theo}{Teorema}
+\newtheorem{ex}{Exemplo}
+
+\input{pacotes.tex}
+
+\title{Técnicas algébricas}
+\subtitle{Pré-cálculo}
+\author{Prof. Dr. Márcio Leandro Gonçalves}
+\date{\today}
+\institute{PUC Minas - Poços de Caldas}
+
+\begin{document}
+
+\begin{frame}
+\maketitle 
+\end{frame}
+
+\begin{frame}{Sumário}
+    \tableofcontents
+\end{frame}
+
+\section{Polinômios}
+
+\begin{frame}[allowframebreaks]{Polinômios}
+
+\begin{itemize}
+    \item Uma função $f: \C \rightarrow \C$ é chamada de \emph{função polinomial} ou \emph{polinômio} de grau $n$ desde que a condição $f(x) = a_1 x^0 + a_2 x^1 + a_3 x^2 + \cdots + a_n x^n$ seja satisfeita para $a_1, a_2, a_3, \ldots, a_n \in \C$, $n \in \N$ e $a_n \neq 0$.
+
+    \item Os números $a_1, a_2, a_3, \ldots, a_n$ são chamados de \emph{coeficientes} de $f$, enquanto $a_1 x^0, a_2 x^1, a_3 x^2, \cdots, a^n x^n$ são os seus \emph{termos} ou \emph{monômios}.
+
+    \skipframe
+
+    \item Exemplos:
+    \begin{itemize}
+        \item $p_1(x) = x^2 + 3x + 1$
+        \item $p_2(x) = \sqrt{2}x^8 - 5x^3 + \dfrac{x^2}{2}$
+        \item $p_3(x) = 4x^{10} + 3x^5 + 9x$
+    \end{itemize}
+
+    \skipframe
+
+    \item Uma função polinomial com um único termo é chamada de \emph{função monomial} ou \emph{monômio}.
+
+    \item Exemplos:
+    \begin{itemize}
+        \item $p_1(x) = 3x^5$
+        \item $p_2(x) = \dfrac{x^6}{\sqrt{2}}$
+        \item $p_3(x) = 2$
+    \end{itemize}
+
+    \skipframe
+
+    \item Um polinômio $p(x)$ \emph{nulo} é aquele que, para todo $x \in \C$, $p(x) = 0$. Matematicamente $p = 0 \Leftrightarrow p(x) = 0 \mid \forall x \in \C$.
+
+    \item Note que, se $p = 0$, então $a_1 = a_2 = a_3 = \cdots = a_n = 0$. Em outras palavras, num polinômio nulo é necessário que todos os seus coeficientes também sejam nulos.
+
+    \skipframe
+
+    \item Dadas duas funções polinomiais $f_1(x)$ e $f_2(x)$, se $f_1(x)$ for idêntica a $f_2(x)$, então, para todo $x \in \C$, $f_1(x) = f_2(x)$.
+
+    \item Note que, se $f_1$ é idêntico a $f_2$, então seus coeficientes devem ser ordenadamente iguais.
+
+    \skipframe
+
+    \item As raízes de um polinômio $p$
+\end{itemize}
+    
+\end{frame}
+
+\section{Fatoração de polinômios}
+
+\begin{frame}[allowframebreaks]{Fatoração de polinômios}
+
+\begin{itemize}
+
+    \item Fatorar um polinômio significa escrevê-lo como uma multiplicação de dois ou mais polinômios.
+
+    \item A seguir serão mostrados os principais métodos usados na hora de fatorar um polinômio qualquer.
+
+    \skipframe
+
+    \item Fator comum em evidência: consiste em colocar um fator comum de dois monômios em evidência, pela propriedade distributiva da multiplicação.
+    \begin{equation*}
+        ax + bx = x(a + b)
+    \end{equation*}
+
+    \item Exemplos:
+    \begin{itemize}
+        \item $4x + 20 = 4(x+5)$
+        \item $3xy + 9xz + 6x = 3x(y + 3z + 2)$
+        \item $-4yx + 2xyz = 2y(-2x + xz)$
+    \end{itemize}
+
+    \skipframe
+
+    \item Agrupamento: consiste em separar a expressão em dois grupos e colocar em evidência o fator comum de cada um deles.
+    \begin{equation*}
+        ax + ay + bx + by = a(x+y) + b(x+y) = (x+y)(a+b)
+    \end{equation*}
+
+    \item Exemplos:
+    \begin{itemize}
+        \item $x^2 - ax + xy - ay = x(x-a) + y(x-a) = (x-a)(x+y)$
+        \item $8ax + bx + 8ay + by = x(8a+b) + y(8a+b) = (8a + b)(x+y)$
+    \end{itemize}
+
+    \skipframe
+
+    \item Teorema da decomposição: dado um polinômio $p$ de grau $n$ de raízes complexas $r_1, r_2, \cdots, r_n$, pode-se fatorá-lo no formato $p(x) = a_n(x - r_1)(x - r_2) \cdots (x - r_n)$, em que $a_n$ é o coeficiente do termo $a_n x^n$.
+
+\end{itemize}
+    
+\end{frame}
+
+\section{Produtos notáveis}
+
+\section{Divisão de polinômios}
+
+\section{Frações algébricas}
+
+\section{Racionalização}
+
+\section{Exercícios}
+
+\section{Respostas dos exercícios}
+
+\section{Referências bibliográficas}
+
+\begin{frame}{Referências bibliográficas}
+    \bibliography{referencias}
+\end{frame}
+
+\end{document}
