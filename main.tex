@@ -34,7 +34,10 @@
 \end{frame}
 
 \begin{frame}{Sumário}
-    \tableofcontents
+    \begin{multicols}{2}
+        \tableofcontents
+    \end{multicols}
+    
 \end{frame}
 
 \section{Polinômios}
@@ -160,6 +163,23 @@
 
 \section{Divisão de polinômios}
 
+\begin{frame}[allowframebreaks]{Divisão de polinômios}
+    \begin{itemize}
+        \item Exemplos:
+        \vspace{0.25cm}
+
+        \begin{enumerate}[a]
+            \item \polylongdiv[style=D]{x^3 - 6x^2 - x + 12}{x-2}
+            \skipframe
+            \item \polylongdiv[style=D]{x^3 - 3x + 2}{x-1}
+            \skipframe
+            \item \polylongdiv[style=D]{6x^2 + 7x - 20}{2x + 5}
+            \skipframe
+            \item \polylongdiv[style=D]{4x^3 - 3x^2 + 3x}{2x^2 + 1}
+        \end{enumerate}
+    \end{itemize} 
+\end{frame}
+
 \section{Frações algébricas}
 
 \begin{frame}[allowframebreaks]{Frações algébricas}
@@ -185,6 +205,21 @@
     \item Exemplos:
     \begin{itemize}
         \item $\dfrac{2}{\sqrt{3}} = \dfrac{2}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{2\sqrt{3}}{3}$
+        \vspace{0.25cm}
+        \item $\dfrac{\sqrt{7}}{\sqrt{5}} = \dfrac{\sqrt{7}}{\sqrt{5}} \cdot \dfrac{\sqrt{5}}{\sqrt{5}} = \dfrac{\sqrt{35}}{3\sqrt{25}} = \dfrac{\sqrt{35}}{15}$
+    \end{itemize}
+
+    \skipframe
+
+    \item Quando o denominador é composto por uma adição ou subtração envolvendo alguma raiz quadrada o processo é diferente: utiliza-se as propriedades do produto da soma pela diferença e multiplica-se pelo "conjugado" do termo.
+
+    \skipframe
+
+    \item Exemplos:
+    \begin{itemize}
+        \item $\dfrac{7}{\sqrt{5}-3} = \dfrac{7}{\sqrt{5}-3} \cdot \dfrac{\sqrt{5}+3}{\sqrt{5}+3} = \dfrac{7\sqrt{5}+21}{(\sqrt{5}-3)(\sqrt{5}+3)} = -\dfrac{7\sqrt{5}+21}{4}$
+        \vspace{0.25cm}
+        \item $\dfrac{x}{2 + \sqrt{y}} = \dfrac{x}{2 + \sqrt{y}} \cdot \dfrac{2-\sqrt{y}}{2-\sqrt{y}} = \dfrac{x(2-\sqrt{y})}{(2+\sqrt{y})(2-\sqrt{y})}=\dfrac{2x-x\sqrt{y}}{4-y}$
     \end{itemize}
     
 \end{itemize}
@@ -267,12 +302,6 @@
     \end{multicols}
 \end{enumerate}
     
-\end{frame}
-
-\section{Referências bibliográficas}
-
-\begin{frame}{Referências bibliográficas}
-    \bibliography{referencias}
 \end{frame}
 
 \end{document}
